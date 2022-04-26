@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 from qiskit import QuantumCircuit
-from _util import compressed_uniform_rotation, sfwht, gray_permutation
+from ._util import compressed_uniform_rotation, sfwht, gray_permutation
 
 
 def fable(a, epsilon):

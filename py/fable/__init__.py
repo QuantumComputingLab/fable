@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """Fable"""
-from fable import fable
+from .fable import fable
 
 __all__ = [
     'fable'
