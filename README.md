@@ -57,8 +57,24 @@ The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolu
 
 Cite the following reference for FABLE:
 
-*FABLE: Fast Approximate Quantum Circuits for Block-Encodings*, Daan Camps, Roel Van Beeumen, 2022.
+[*FABLE: Fast Approximate Quantum Circuits for Block-Encodings*](https://arxiv.org/abs/2205.00081), Daan Camps, Roel Van Beeumen, 2022.
 
 ## Developers - Lawrence Berkeley National Laboratory
 - [Daan Camps](http://campsd.github.io/) - dcamps@lbl.gov
 - [Roel Van Beeumen](http://www.roelvanbeeumen.be/) - rvanbeeumen@lbl.gov
+
+## About 
+FABLE Copyright (c) 2022, The Regents of the University of California,
+through Lawrence Berkeley National Laboratory (subject to receipt of
+any required approvals from the U.S. Dept. of Energy). All rights reserved.
+
+If you have questions about your rights to use or distribute this software,
+please contact Berkeley Lab's Intellectual Property Office at
+IPO@lbl.gov.
+
+NOTICE.  This Software was developed under funding from the U.S. Department
+of Energy and the U.S. Government consequently retains certain rights.  As
+such, the U.S. Government has been granted for itself and others acting on
+its behalf a paid-up, nonexclusive, irrevocable, worldwide license in the
+Software to reproduce, distribute copies to the public, prepare derivative 
+works, and perform publicly and display publicly, and to permit others to do so.
