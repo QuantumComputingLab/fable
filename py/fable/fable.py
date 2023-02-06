@@ -78,7 +78,7 @@ def fable(a, epsilon):
         circ.h(i+1)
 
     # matrix oracle
-    circ += OA
+    circ = circ.compose(OA)
 
     # swap register
     for i in range(logn):

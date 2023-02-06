@@ -57,7 +57,7 @@ The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolu
 
 Cite the following reference for FABLE:
 
-[*FABLE: Fast Approximate Quantum Circuits for Block-Encodings*](https://arxiv.org/abs/2205.00081), Daan Camps, Roel Van Beeumen, 2022.
+[*FABLE: Fast Approximate Quantum Circuits for Block-Encodings*](https://ieeexplore.ieee.org/abstract/document/9951292), Daan Camps, Roel Van Beeumen, 2022 2022 IEEE International Conference on Quantum Computing and Engineering (QCE), [arXiv:2205.00081](https://arxiv.org/abs/2205.00081).
 
 ## Developers - Lawrence Berkeley National Laboratory
 - [Daan Camps](http://campsd.github.io/) - dcamps@lbl.gov
