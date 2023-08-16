@@ -5,21 +5,20 @@ from qiskit import QuantumCircuit
 from ._util import compressed_uniform_rotation, sfwht, gray_permutation
 
 
-def fable(a, epsilon):
+def fable(a, epsilon=None):
     '''FABLE - Fast Approximate BLock Encodings.
 
     Args:
         a: array
             matrix to be block encoded.
         epsilon: float >= 0
-            compression threshold.
+            (optional) compression threshold.
     Returns:
         circuit: qiskit circuit
             circuit that block encodes A
         alpha: float
             subnormalization factor
     '''
-
     epsm = np.finfo(a.dtype).eps
     alpha = np.linalg.norm(np.ravel(a), np.inf)
     if alpha > 1:
@@ -47,7 +46,8 @@ def fable(a, epsilon):
                 )
             )
         # threshold the vector
-        a[abs(a) <= epsilon] = 0
+        if epsilon:
+            a[abs(a) <= epsilon] = 0
         # compute circuit
         OA = compressed_uniform_rotation(a)
     else:  # complex data
@@ -57,7 +57,8 @@ def fable(a, epsilon):
                     2.0 * np.arccos(np.abs(a))
                 )
             )
-        a_m[abs(a_m) <= epsilon] = 0
+        if epsilon:
+            a_m[abs(a_m) <= epsilon] = 0
 
         # phase
         a_p = gray_permutation(
@@ -65,11 +66,13 @@ def fable(a, epsilon):
                     -2.0 * np.angle(a)
                 )
             )
-        a_p[abs(a_p) <= epsilon] = 0
+        if epsilon:
+            a_p[abs(a_p) <= epsilon] = 0
 
         # compute circuit
-        OA = compressed_uniform_rotation(a_m) + \
-            compressed_uniform_rotation(a_p, ry=False)
+        OA = compressed_uniform_rotation(a_m).compose(
+                compressed_uniform_rotation(a_p, ry=False)
+            )
 
     circ = QuantumCircuit(2*logn + 1)
 
