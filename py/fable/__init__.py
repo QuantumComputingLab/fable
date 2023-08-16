@@ -8,7 +8,7 @@ __all__ = [
 ]
 
 
-__version__ = '1.0'
+__version__ = '1.0.1'
 __author__ = '''Daan Camps'''
 __maintainer__ = 'Daan Camps'
 __email__ = 'daancamps@gmail.com'
