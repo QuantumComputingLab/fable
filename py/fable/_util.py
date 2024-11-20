@@ -98,6 +98,6 @@ def compressed_uniform_rotation(a, ry=True):
         # add CNOT gates
         for j in range(1, 2*n+1):
             if parity_check & (1 << (j-1)):
-                circ.cnot(j, 0)
+                circ.cx(j, 0)
 
     return circ
